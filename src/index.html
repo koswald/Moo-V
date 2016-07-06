@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <title>Moo-V</title>
+
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body ng-app="movie-list">
+
+  <nav class="navbar navbar-default">
+    <ul class="nav navbar-nav" ng-click="blur()">
+
+      <li class="appTitle"> <a href="#"> Moo-V </a> </li>
+
+      <li ng-class="{ active: $state.includes('search-results') }">
+        <a ui-sref="search-results({ reload: true })"> Movie Search </a>
+      </li>
+
+      <li ng-class="{ active: $state.includes('movie-details') }">
+        <a ui-sref="movie-details"> Movie Details </a>
+      </li>
+
+      <li ng-class="{ active: $state.includes('karls-movies') }">
+        <a ui-sref="karls-movies"> Karl's Movies </a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <div class="main" ui-view></div>
+
+  <script src="../node_modules/angular/angular.js"></script> 
+
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script> --> <!-- troubleshooting old ipod -->
+
+  <script src="../node_modules/angular-ui-router/release/angular-ui-router.js"></script> 
+
+<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>--> <!-- troubleshooting old ipod -->
+
+  <script src="js/app.js"></script>
+  <script src="js/run/runModule.js"></script>
+  <script src="js/values/companyName.js"></script>
+  <script src="js/values/myMoviesUrl.js"></script>
+  <script src="js/values/myMoviesUrlFallback01.js"></script>
+  <script src="js/values/omdbUrl.js"></script>
+  <script src="js/controllers/resultsController.js"></script>
+  <script src="js/controllers/detailsController.js"></script>
+  <script src="js/controllers/listController.js"></script>
+  <script src="js/factories/omdbFactory.js"></script>
+  <script src="js/factories/myMoviesFactory.js"></script>
+  <script src="js/config/stateConfig.js"></script>
+</body>
+</html>

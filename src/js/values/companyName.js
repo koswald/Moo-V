@@ -1,0 +1,1 @@
+angular.module('movie-list').value('companyName', 'Catalyst DevWorks');

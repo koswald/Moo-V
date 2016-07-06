@@ -1,0 +1,41 @@
+
+<!-- views/movie-list.tpl.html -->
+
+<link rel="stylesheet" href="css/table.css" />
+<link rel="stylesheet" href="css/tableStriped.css" />
+<h2> Karl's Movies </h2>
+
+<span> {{ status }} </span>
+<span> {{ eventData }} </span>
+
+<table ng-show="success">
+  <tr>
+    <th hidden> id </th>
+    <th> Title </th>
+    <th hidden> active </th>
+    <th> </th>
+    <th> </th>
+  </tr>
+  <tr ng-repeat="x in movies.data">
+    <td hidden> {{ x.id }} </td>
+    <td> {{ x.title }} </td>
+    <td hidden> {{ x.active }} </td>
+    <td> <button class="table-button movie-details" ng-click="movieDetails(x.title)"> Movie details </button> </td>
+    <td> <button class="table-button remove-movie" ng-click="removeMovie(x.title)"> Remove movie </button> </td>
+  </tr>
+</table>
+
+<div ng-show="errored">
+
+  <p ng-click="scrollDown()"> 
+    <input type="checkbox" ng-model="ShowErrorDetails" /> Show details 
+  </p>
+
+  <div ng-show="ShowErrorDetails">
+    <p> Main Url {{ mainUrl }} </p>
+    <p> Fallback url: {{ fallbackUrl }} </p>
+    <p> Error details: {{ errorDetail }} </p>
+  </div>
+
+</div>
+

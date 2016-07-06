@@ -1,0 +1,13 @@
+
+<!-- views/search-results.tpl.html -->
+
+<form name="movie-search-form" ng-submit="results.searchSubmit()">
+  <span class="labelForSearchBox">Search <a href="{{ omdbUrl }}" target="_blank" title="Open link in a new tab">OMDB</a></span>
+  <input type="text" placeholder="Enter a movie title" ng-model="results.title" required autofocus>
+  <button type="submit">Search</button>
+</form>
+<hr />
+
+{{ results.searchStatus }}
+
+<div ui-view></div>

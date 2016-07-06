@@ -1,0 +1,35 @@
+{
+  "name": "angular_omdb_base",
+  "version": "1.0.0",
+  "description": "Angular OMDB Base Project",
+  "main": "index.js",
+  "devDependencies": {
+    "angular-mocks": "^1.5.5",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-coverage": "^1.0.0",
+    "karma-fixture": "^0.2.6",
+    "karma-html2js-preprocessor": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-json-fixtures-preprocessor": "0.0.6",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "phantomjs-prebuilt": "^2.1.7"
+  },
+  "scripts": {
+    "test": "karma start"
+  },
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.2.18",
+    "bootstrap": "^3.3.6",
+    "grunt": "^0.4.5",
+    "grunt-contrib-connect": "^0.11.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.catalystitservices.com/koswald/omdb.git"
+  },
+  "author": "Karl Oswald, koswald@catalystdevworks.com",
+  "license": "ISC"
+}

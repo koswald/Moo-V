@@ -1,0 +1,33 @@
+
+<!-- search-results.list.tpl.html -->
+
+<link rel="stylesheet" href="css/table.css" />
+<h3>Results from <a href="{{ $parent.omdbUrl }}" target="_blank">OMDB</a></h3>
+
+<div ng-show="$parent.results.succeeded">
+  <table>
+    <tr> <td>Title</td> <td> {{ $parent.omdb.movies.Title }} </td> </tr>
+
+    <tr> <td>Year</td> <td> {{ $parent.omdb.movies.Year }} </td> </tr>
+
+    <tr> <td>Genre</td> <td> {{ $parent.omdb.movies.Genre }} </td> </tr>
+
+    <tr> <td>Actors</td> <td> {{ $parent.omdb.movies.Actors }} </td> </tr>
+
+    <tr> <td>Plot</td> <td> {{ $parent.omdb.movies.Plot }} </td> </tr>
+  </table>
+  <button ng-click="$parent.results.movieDetails()">More Details</button>
+</div>
+
+<div ng-show="$parent.results.errored">
+
+  <p class="omdbMoviesError"> {{ $parent.omdb.movies.Error }} </p>
+
+  <p ng-click="$parent.results.scrollDown()"> <input type="checkbox" ng-model="ShowErrorDetails" /> Show details </p>
+
+  <div ng-show="ShowErrorDetails">
+    <p> You searched for: {{ $parent.results.title }} </p>
+    <p> {{ $parent.omdb.movies }} </p>
+  </div>
+
+</div>

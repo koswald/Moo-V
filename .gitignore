@@ -1,0 +1,25 @@
+### Folders for Git to ignore ###
+
+# IntelliJ settings
+.idea
+
+# Eclipse (IDE) settings
+.settings
+/bin/
+
+# front-end test results
+coverage
+
+# front-end libraries
+node_modules
+
+# back-end build files
+target
+
+### Files for Git to ignore ###
+
+# IntelliJ settings
+karl-oswald.iml
+
+# other
+# application.properties

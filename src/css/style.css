@@ -1,0 +1,23 @@
+
+div.main {
+   padding: 15px;
+}
+a.appTitle {
+	font-weight: bold;
+	font-style: italic;
+}
+.labelForSearchBox {
+	padding-right: 10px;
+}
+button {
+	margin-top: 20px; /*  */
+	margin-bottom: 20px;
+}
+.table-button {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.omdbMoviesError {
+	color: red;
+	font-size: 130%;
+}
