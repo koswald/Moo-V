@@ -90,7 +90,7 @@ Before changing this this setting,
 - End-task the java.exe process while the back-end server is running (it may be javaw.exe if running from Eclipse), to prevent the table from being dropped.
 - Add `application.properties` to `.git\info\exclude`
 - Run the git command `git update-index --assume-unchanged src/main/resources/application.properties`
-- Now `application.properties` can be changed, and changed will be ignored by Git.
+- Now `application.properties` can be changed, and the changes will be ignored by Git.
 
 In [application.properties]:
 ```
