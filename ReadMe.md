@@ -92,6 +92,11 @@ Before changing this this setting,
 - Run the git command `git update-index --assume-unchanged src/main/resources/application.properties`
 - Now `application.properties` can be changed, and the changes will be ignored by Git.
 
+To revert,
+
+- Comment out `application.properties` in `.git\info\exclude`, or delete it.
+- Use the git command above but with `--no-assume-unchanged`.
+
 In [application.properties]:
 ```
 # options: create-drop, update, validate
