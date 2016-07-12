@@ -61,7 +61,7 @@ Start the front end server
 
 	grunt
 
-To test the installation, open a browser to http://localhost:9000/src/
+To test the installation, open a browser to [http://localhost:9000/src](http://localhost:9000/src)
 
 The front-end port can be changed in `Gruntfile.js`.
 
@@ -119,10 +119,10 @@ Front-end tests can be run by opening SpecRunner.html or by running either of th
 **One advantage to using the karma test runner** is that tests are automatically rerun on file changes. The karma tests are set up to use the headless browser PhantomJS for speed, but Chrome can easily be added to the mix by modifying the karma.config.js browser array. For more browser launchers, visit [https://www.npmjs.com/browse/keyword/karma-launcher]().
 
 **Another advantage** of using karma is that it has been configured for coverage. After running the tests, the coverage reports can be accessed from `\coverage\<browser (OS)>\index.html`.
-Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Missing table: movie -> [Help 1]", make sure that the application.properties value `spring.jpa.hibernate.ddl-auto` is set to `create-drop`.
+
 # Troubleshooting
 
-Hibernate error: If you get the following error, 
+Hibernate error: If you get the following error when starting the back-end server, "Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Missing table: movie -> [Help 1]", make sure that the application.properties value `spring.jpa.hibernate.ddl-auto` is set to `create-drop`.
 
 # Links and Credits
 
