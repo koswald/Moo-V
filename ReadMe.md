@@ -30,8 +30,8 @@ Create a database from a console window
 	createdb -h localhost -p 5432 -U postgres karls-movie-db
 
 If values above are changed, it will be necessary later to modify one or both of
-- pom.xml
-- application.properties
+- [pom.xml]
+- [application.properties]
 
 Clone the project.
 
@@ -63,13 +63,12 @@ Start the front end server
 
 To test the installation, open a browser to [http://localhost:9000/src](http://localhost:9000/src)
 
-The front-end port can be changed in `Gruntfile.js`.
+The front-end port can be changed in [Gruntfile.js](Gruntfile.js).
 
-The back-end port is hardcoded in three locations:
-
-	\src\main\java\config\AppConfig.java
-	\src\js\values\myMoviesUrl.js
-	\src\js\values\myMoviesUrlFallback01.js
+> Note: The back-end port is hardcoded in three locations: 
+> [AppConfig.java](src\main\java\config\AppConfig.java), 
+> [myMoviesUrl.js](src\js\values\myMoviesUrl.js), and 
+> [myMoviesUrlFallback.js](src\js\values\myMoviesUrlFallback01.js).
 
 # Open the project in Eclipse <a name="open1"></a>
 
@@ -93,7 +92,7 @@ Before changing this this setting,
 - End-task the java.exe process while the back-end server is running (it may be javaw.exe if running from Eclipse), to prevent the table from being dropped.
 - Add `application.properties` to `.git\info\exclude`
 - Run the git command `git update-index --assume-unchanged src/main/resources/application.properties`
-- Now `application.properties` can be changed, and the changes will be ignored by Git.
+- Now [application.properties] can be changed, and the changes will be ignored by Git.
 
 To revert,
 
@@ -102,10 +101,8 @@ To revert,
 
 In [application.properties], change `create-drop` to `validate` or `update`:
 ```
-# options: create-drop, update, validate
-spring.jpa.hibernate.ddl-auto=validate
+spring.jpa.hibernate.ddl-auto=create-drop
 ```
-[application.properties]: src/main/resources/application.properties "view the whole file"
 
 # Unit Tests
 
@@ -134,18 +131,21 @@ The [Spring Boot getting started document] was a *must*.
 
 The backend java leverages [another GitHub project].
 
-An online [markdown editor] was used to create this file.
+An online [markdown editor] was used to create this file. Here is [a basic markdown primer].
 
 [//]: # (any or all of the following references could have be placed anywhere in this file; note that surrounding the url with angle brackets is optional)
 
 [Node.js]: https://nodejs.org/en/download/current/
 [Java]: http://www.java.com
 [Maven]: http://maven.apache.org/
+[pom.xml]: pom.xml
+[application.properties]: src/main/resources/application.properties "view the whole file"
 [markdown editor]: <http://dillinger.io> "dillinger.io is an online markdown editor that can save to and import from your Dropbox or OneDrive"
 [pluralsight tutorial]: <https://app.pluralsight.com/library/courses/angularjs-ngmock-unit-testing>
 [omdb api]: <http://omdbapi.com>
 [spring boot getting started document]: <http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#getting-started-installing-spring-boot>
 [another GitHub project]: <https://github.com/AlgiersJUG/spring-boot-postgres-sample>
 [same-file link]: http://stackoverflow.com/questions/6695439/how-do-you-create-link-to-a-named-anchor-in-multimarkdown
+[a basic markdown primer]: http://docs.gitlab.com/ee/markdown/markdown.html
 
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
