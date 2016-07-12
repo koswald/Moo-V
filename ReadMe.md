@@ -65,10 +65,10 @@ To test the installation, open a browser to [http://localhost:9000/src](http://l
 
 The front-end port can be changed in [Gruntfile.js](Gruntfile.js).
 
-> Note: The back-end port is hardcoded in three locations: 
-> [AppConfig.java](src\main\java\config\AppConfig.java), 
-> [myMoviesUrl.js](src\js\values\myMoviesUrl.js), and 
-> [myMoviesUrlFallback.js](src\js\values\myMoviesUrlFallback01.js).
+> **Note:** The back-end port is hardcoded in three locations: 
+> [AppConfig.java], 
+> [myMoviesUrl.js], and 
+> [myMoviesUrlFallback.js].
 
 # Open the project in Eclipse <a name="open1"></a>
 
@@ -139,7 +139,10 @@ An online [markdown editor] was used to create this file. Here is [a basic markd
 [Java]: http://www.java.com
 [Maven]: http://maven.apache.org/
 [pom.xml]: pom.xml
-[application.properties]: src/main/resources/application.properties "view the whole file"
+[application.properties]: src/main/resources/application.properties
+[AppConfig.java]: src/main/java/config/AppConfig.java
+[myMoviesUrl.js]: src/js/values/myMoviesUrl.js
+[myMoviesUrlFallback.js]: src/js/values/myMoviesUrlFallback01.js
 [markdown editor]: <http://dillinger.io> "dillinger.io is an online markdown editor that can save to and import from your Dropbox or OneDrive"
 [pluralsight tutorial]: <https://app.pluralsight.com/library/courses/angularjs-ngmock-unit-testing>
 [omdb api]: <http://omdbapi.com>
