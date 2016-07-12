@@ -6,14 +6,15 @@
 - [Run the back end server from Eclipse](#run1)
 - [Run the back end server from IntelliJ](#run2)
 - [Once you are satisfied with the back-end model](#once)
-- [Tests](#tests)
+- [Unit Tests](#unit-tests)
+- [Troubleshooting](#troubleshooting)
 - [Links and Credits](#links-and-credits)
 
 # Project description
 
 This web app searches http://omdbapi.com for movie data and if desired adds a movie (title) to a local database.
 
-The front end and back end code are in the same folder but run on different servers. No IDE was used in development, except that the JUnit tests were written and run in Eclipse. Front-end tests are run from the command line (see below).
+The front end and back end code are in the same project folder but run on different servers. No IDE was used in development, except that the JUnit tests were written and run in Eclipse. Front-end tests are run from the command line (see below).
 
 **Front-end details:** AngularJS (focus), angular-ui-router, grunt, bootstrap.css, jasmine with karma test runner. No bootstrap.js, so no jQuery. All dependencies are installed with npm.
 
@@ -21,7 +22,7 @@ The front end and back end code are in the same folder but run on different serv
 
 # Installation procedure
 
-Install [PostgreSQL](https://www.postgresql.org/download/). Version 9.4 or later is recommended; recommended username and port: postgres and 5432.
+Install [PostgreSQL](https://www.postgresql.org/download/). Version 9.4 or later is recommended; recommended username and port: postgres and 5432. When the install is complete, the Stack Builder install will start automatically and you can Cancel out of it.
 
 Create a database from a console window
 
@@ -36,11 +37,13 @@ Clone the project.
 
 If you have a newish computer configuration, you may need to install [Node.js], [Java][] [8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) **JDK**, and [Maven]. The Maven binary zip archive is typically a good choice for Windows users. 
 
-After installing Java and Maven, you will need to set the system environment variable JAVA_HOME to something like `C:\Program Files\Java\jdk1.8.0_91` (note the lack of \bin at the end) and add the Maven bin folder to the system environment variable Path, something like `C:\tools\apache-maven-3.3.9\bin`.
+After installing Java, you will need to set the user environment variable JAVA_HOME to something like `C:\Program Files\Java\jdk1.8.0_91` (note the lack of \bin at the end); and append ;%JAVA_HOME%\bin to the system environment variable PATH (with %JAVA_HOME% expanded to its actual value).
+
+After extracting the Maven binaries, add the Maven bin folder to the system environment variable Path, something like `C:\tools\apache-maven-3.3.9\bin`.
 
 Open a console window at the project folder (the folder with package.json).
 
-Compile and run the java files to start the back end server
+Compile and run the java files to start the back end server with the following command. The first time you run it, it will take a while for Maven to download the dependencies.
 
 	mvn spring-boot:run
 
@@ -94,17 +97,17 @@ Before changing this this setting,
 
 To revert,
 
-- Comment out `application.properties` in `.git\info\exclude`, or delete it.
+- Comment out `application.properties` in `.git\info\exclude` by beginning the line with a `#`, or delete it.
 - Use the git command above but with `--no-assume-unchanged`.
 
-In [application.properties]:
+In [application.properties], change `create-drop` to `validate` or `update`:
 ```
 # options: create-drop, update, validate
 spring.jpa.hibernate.ddl-auto=validate
 ```
 [application.properties]: src/main/resources/application.properties "view the whole file"
 
-# Tests
+# Unit Tests
 
 Back-end junit tests are not setup for running from the command line. They have been run in Eclipse and IntelliJ.
 
@@ -116,6 +119,10 @@ Front-end tests can be run by opening SpecRunner.html or by running either of th
 **One advantage to using the karma test runner** is that tests are automatically rerun on file changes. The karma tests are set up to use the headless browser PhantomJS for speed, but Chrome can easily be added to the mix by modifying the karma.config.js browser array. For more browser launchers, visit [https://www.npmjs.com/browse/keyword/karma-launcher]().
 
 **Another advantage** of using karma is that it has been configured for coverage. After running the tests, the coverage reports can be accessed from `\coverage\<browser (OS)>\index.html`.
+Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Missing table: movie -> [Help 1]", make sure that the application.properties value `spring.jpa.hibernate.ddl-auto` is set to `create-drop`.
+# Troubleshooting
+
+Hibernate error: If you get the following error, 
 
 # Links and Credits
 
@@ -125,11 +132,11 @@ The Bradley Braithwaite [Pluralsight tutorial] on AngularJS testing was very hel
 
 The [Spring Boot getting started document] was a *must*.
 
-The backend java leverages [a project I found on GitHub].
+The backend java leverages [another GitHub project].
 
 An online [markdown editor] was used to create this file.
 
-[//]: # (any or all of the following references could have be placed anywhere in this file)
+[//]: # (any or all of the following references could have be placed anywhere in this file; note that surrounding the url with angle brackets is optional)
 
 [Node.js]: https://nodejs.org/en/download/current/
 [Java]: http://www.java.com
@@ -138,7 +145,7 @@ An online [markdown editor] was used to create this file.
 [pluralsight tutorial]: <https://app.pluralsight.com/library/courses/angularjs-ngmock-unit-testing>
 [omdb api]: <http://omdbapi.com>
 [spring boot getting started document]: <http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#getting-started-installing-spring-boot>
-[a project I found on github]: <https://github.com/AlgiersJUG/spring-boot-postgres-sample>
+[another GitHub project]: <https://github.com/AlgiersJUG/spring-boot-postgres-sample>
 [same-file link]: http://stackoverflow.com/questions/6695439/how-do-you-create-link-to-a-named-anchor-in-multimarkdown
 
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
