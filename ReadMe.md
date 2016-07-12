@@ -119,7 +119,13 @@ Front-end tests can be run by opening SpecRunner.html or by running either of th
 
 # Troubleshooting
 
-Hibernate error: If you get the following error when starting the back-end server, "Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Missing table: movie -> [Help 1]", make sure that the application.properties value `spring.jpa.hibernate.ddl-auto` is set to `create-drop`.
+Hibernate error: If you get the following error when starting the back-end server
+
+```
+Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Missing table: movie -> [Help 1]
+```
+
+make sure that the application.properties value `spring.jpa.hibernate.ddl-auto` is set to `create-drop`.
 
 # Links and Credits
 
