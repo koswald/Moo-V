@@ -85,28 +85,28 @@ From the Run menu, click Edit Configurations ... | click Maven on left | click t
 
 # Once you are satisfied with the back-end model <a name="once"></a>
 
-At some point, when changing to a more production-like environment, and when the back-end model is stable, it will be desirable to change the file `application.properties`'s value `spring.jpa.hibernate.ddl-auto` from `create-drop` to `validate` or to `update`, so that the database table is not dropped and recreated whenever the back-end server is stopped and restarted. 
+At some point, when the back-end model is stable, it will be desirable to change the setting that drops and recreates the database movie table every time the back-end server is stopped and restarted. 
 
-Before changing this this setting,
+Before changing this setting,
 
 - End-task the java.exe process while the back-end server is running (it may be javaw.exe if running from Eclipse), to prevent the table from being dropped.
 - Add `application.properties` to `.git\info\exclude`
 - Run the git command `git update-index --assume-unchanged src/main/resources/application.properties`
 - Now [application.properties] can be changed, and the changes will be ignored by Git.
 
-To revert,
-
-- Comment out `application.properties` in `.git\info\exclude` by beginning the line with a `#`, or delete it.
-- Use the git command above but with `--no-assume-unchanged`.
-
-In [application.properties], change `create-drop` to `validate` or `update`:
+To change the setting, in [application.properties], change `create-drop` to `validate` or `update`:
 ```
 spring.jpa.hibernate.ddl-auto=create-drop
 ```
 
+To revert the setting, if that should ever be necessary,
+
+- Comment out `application.properties` in `.git\info\exclude` by beginning the line with a `#`, or delete it.
+- Use the git command above but with `--no-assume-unchanged`.
+
 # Unit Tests
 
-Back-end junit tests are not setup for running from the command line. They have been run in Eclipse and IntelliJ.
+Back-end junit tests are not setup for running from the command line. They have been successfully in Eclipse and IntelliJ.
 
 Front-end tests can be run by opening SpecRunner.html or by running either of these commands:
 
