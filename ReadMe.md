@@ -2,10 +2,10 @@
 
 - [Project description](#project-description)
 - [Installation procedure](#installation-procedure)
-- [Open the project in Eclipse](#open1)
-- [Run the back end server from Eclipse](#run1)
-- [Run the back end server from IntelliJ](#run2)
-- [Once you are satisfied with the back-end model](#once)
+- [Open the project in Eclipse](#open-the-project-in-eclipse)
+- [Run the back end server from Eclipse](#run-the-back-end-server-from-eclipse)
+- [Run the back end server from IntelliJ](#run-the-back-end-server-from-intellij)
+- [Once you are satisfied with the back-end model](#once-you-are-satisfied-with-the-back-end-model)
 - [Unit Tests](#unit-tests)
 - [Troubleshooting](#troubleshooting)
 - [Links and Credits](#links-and-credits)
@@ -70,20 +70,20 @@ The front-end port can be changed in [Gruntfile.js](Gruntfile.js).
 > [myMoviesUrl.js], and 
 > [myMoviesUrlFallback.js].
 
-# Open the project in Eclipse <a name="open1"></a>
+# Open the project in Eclipse 
 
 - Move or copy the project to the Eclipse workspace, or create a new workspace in the project's parent folder (slower).
 - In the Eclipse File menu, select Import ... | General | Existing Projects into Workspace | select the omdb project folder | Finish.
 
-# Run the back end server from Eclipse <a name="run1"></a>
+# Run the back end server from Eclipse
 
 Right click the project in the Eclipse's Project Explorer and select Run As | Maven build... | enter `spring-boot:run` in the goals field | click Run.
 
-# Run the back end server from IntelliJ <a name="run2"></a>
+# Run the back end server from IntelliJ
 
 From the Run menu, click Edit Configurations ... | click Maven on left | click the + button | click Maven on the left (again) | in the Name field give the configuration a name, like "omdb back end" | in the Command line field, type `spring-boot:run` (leave out the `mvn`) | click OK.
 
-# Once you are satisfied with the back-end model <a name="once"></a>
+# Once you are satisfied with the back-end model
 
 At some point, when the back-end model is stable, it will be desirable to change the setting that drops and recreates the database movie table every time the back-end server is stopped and restarted. 
 
@@ -125,7 +125,7 @@ Hibernate error: If you get the following error when starting the back-end serve
 Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Missing table: movie -> [Help 1]
 ```
 
-make sure that the application.properties value `spring.jpa.hibernate.ddl-auto` is set to `create-drop`.
+make sure that the [application.properties] value `spring.jpa.hibernate.ddl-auto` is set to `create-drop`.
 
 # Links and Credits
 
