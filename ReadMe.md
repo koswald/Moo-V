@@ -113,7 +113,7 @@ Front-end tests can be run by opening SpecRunner.html or by running either of th
 	npm test
 	karma start
 
-**One advantage to using the karma test runner** is that tests are automatically rerun on file changes. The karma tests are set up to use the headless browser PhantomJS for speed, but Chrome can easily be added to the mix by modifying the karma.config.js browser array. For more browser launchers, visit [https://www.npmjs.com/browse/keyword/karma-launcher]().
+**One advantage to using the karma test runner** is that tests are automatically rerun on file changes. The karma tests are set up to use the headless browser PhantomJS for speed, but Chrome can easily be added to the mix by modifying the karma.config.js browser array. For more browser launchers, visit https://www.npmjs.com/browse/keyword/karma-launcher.
 
 **Another advantage** of using karma is that it has been configured for coverage. After running the tests, the coverage reports can be accessed from `\coverage\<browser (OS)>\index.html`.
 
