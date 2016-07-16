@@ -1,8 +1,12 @@
+<!-- search-results.list.tpl.html --> 
+<!-- this is a child template that shares a controller with its parent -->
 
-<!-- search-results.list.tpl.html -->
+<!-- Show abbreviated details for the movie --> 
 
 <link rel="stylesheet" href="css/table.css" />
 <h3>Results from <a href="{{ $parent.omdbUrl }}" target="_blank">OMDB</a></h3>
+
+<!-- show the summary details -->
 
 <div ng-show="$parent.results.succeeded">
   <table>
@@ -18,6 +22,8 @@
   </table>
   <button ng-click="$parent.results.movieDetails()">More Details</button>
 </div>
+
+<!-- show error message, if any -->
 
 <div ng-show="$parent.results.errored">
 

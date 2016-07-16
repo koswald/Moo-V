@@ -1,11 +1,15 @@
-
 <!-- views/movie-details.tpl.html -->
+
+<!-- Show verbose details for the selected movie -->
 
 <link href="css/table.css" rel="stylesheet" />
 <h2> {{ details.Title }} </h2>
 <hr />
 
 <div ng-show="succeeded">
+
+  <!-- show a poster image, if available -->
+
   <div>
     <img ng-src="{{ details.Poster }}" alt="Poster" onerror="hidden=true"> 
 
@@ -18,6 +22,8 @@
       {{ "addMovieError: " + addMovieError }} <br />
     </div>
   </div>
+
+  <!-- show lots of movie details -->
 
   <table>
     <tr><td> Title </td><td>{{ details.Title }}</td></tr>
@@ -56,9 +62,15 @@
 
     <tr><td> Type </td><td>{{ details.Type }}</td></tr>
   </table>
+
+  <!-- option to see raw JSON movie details -->
+
   <p ng-click="scrollDown()"> <input type="checkbox" ng-model="ShowJSON" /> Show raw details </p>
   <p ng-show="ShowJSON"> {{ details }} </p>
+
 </div>
+
+<!-- show $http errors -->
 
 <div ng-show="errored">
   <p> {{ details.Error }} </p>

@@ -29,17 +29,18 @@ Create a database from a console window
 	cd "C:\Program Files\PostgreSQL\9.4\bin"
 	createdb -h localhost -p 5432 -U postgres karls-movie-db
 
-If values above are changed, it will be necessary later to modify one or both of
-- [pom.xml]
-- [application.properties]
-
-Clone the project.
+> **Note:** The port (5432) and database name (karls-movie-db) 
+> are hardcoded in [application.properties].
 
 If you have a newish computer configuration, you may need to install [Node.js], [Java][] [8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) **JDK**, and [Maven]. The Maven binary zip archive is typically a good choice for Windows users. 
 
 After installing Java, you will need to set the user environment variable JAVA_HOME to something like `C:\Program Files\Java\jdk1.8.0_91` (note the lack of \bin at the end); and append ;%JAVA_HOME%\bin to the system environment variable PATH (with %JAVA_HOME% expanded to its actual value).
 
 After extracting the Maven binaries, add the Maven bin folder to the system environment variable Path, something like `C:\tools\apache-maven-3.3.9\bin`.
+
+----
+
+##### Clone the project.
 
 Open a console window at the project folder (the folder with package.json).
 

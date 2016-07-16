@@ -14,7 +14,7 @@ public class AppConfig {
 
 	// header values
     public static final boolean exposeAllowedOrigins = true; // expose to client/requester
-	public static final String ACCESS_CONTROL_ALLOW_ORIGIN = "http://localhost*, http://lap6*, http://192.168.1.*"; // ** can cross / boundary so use sparingly if ever; * and ? are supported too
+	public static final String ACCESS_CONTROL_ALLOW_ORIGIN = "http://localhost*, http://lap6*, http://192.168.1.*, http://karl.moo-v-fans*."; // ** can cross / boundary so use sparingly if ever; * and ? are supported too
 	public static final String ACCESS_CONTROL_ALLOW_HEADERS = "origin, content-type, accept, x-requested-with";
 	public static final String ACCESS_CONTROL_ALLOW_METHODS = "GET, POST, PUT, DELETE, OPTIONS, HEAD";
 	public static final String ACCESS_CONTROL_MAX_AGE = "1209600"; // in seconds

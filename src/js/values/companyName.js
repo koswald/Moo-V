@@ -1,1 +1,1 @@
-angular.module('movie-list').value('companyName', 'Catalyst DevWorks');
+angular.module('movie-list').value('companyName', 'Moo-V Fans');

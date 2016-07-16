@@ -44,7 +44,7 @@ public class MovieService_Test {
 		// prepare to instantiate a third movie if necessary
 		// instantiate the class under test, MovieService, with a mock repo
 		
-		origin = "http://karl.catalystsolves.com";
+		origin = "http://karl.moo-v-fans.com";
 		badOrigin = "http://maliciousOrigin.com";
 		title1 = "High Noon";
 		title2 = "The Good, the Bad, and the Ugly";

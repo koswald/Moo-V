@@ -7,10 +7,13 @@
 .settings
 /bin/
 
+# Visual Studio settings
+.vs
+
 # front-end test results
 coverage
 
-# front-end libraries
+# node libraries
 node_modules
 
 # back-end build files
@@ -19,7 +22,10 @@ target
 ### Files for Git to ignore ###
 
 # IntelliJ settings
-karl-oswald.iml
+*.iml
+
+# Visual Studio settings
+*.sln
 
 # other
 # application.properties
