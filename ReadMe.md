@@ -14,9 +14,9 @@
 
 This web app searches http://omdbapi.com for movie data and if desired adds a movie (title) to a local database.
 
-The front end and back end code are in the same project folder but run on different servers. 
+The front end and back end code share the same project folder but run on different servers. 
 
-**Front-end details:** AngularJS (focus), angular-ui-router, grunt, bootstrap.css, jasmine with karma test runner. No bootstrap.js, so no jQuery. All dependencies are installed with npm.
+**Front-end details:** AngularJS (focus), angular-ui-router, grunt, bootstrap.css, jasmine with karma test runner. No bootstrap.js, so no jQuery, except for Angular's native jqLite. All dependencies are installed with npm.
 
 **Back-end details:** Spring-boot, java, maven, hibernate, PostgreSQL. Spring-boot starts a Tomcat server and is run from the command line. 
 
@@ -107,12 +107,9 @@ To revert the setting, if that should ever be necessary,
 
 # Unit Tests
 
-Back-end junit tests are not setup for running from the command line. They have been successfully in Eclipse and IntelliJ.
+Back-end unit tests have been run in Eclipse and IntelliJ.
 
-Front-end tests can be run by opening SpecRunner.html or by running either of these commands:
-
-	npm test
-	karma start
+Front-end unit tests can be run by opening SpecRunner.html or from the command line with `npm test' or `karma start`.
 
 **One advantage to using the karma test runner** is that tests are automatically rerun on file changes. The karma tests are set up to use the headless browser PhantomJS for speed, but Chrome can easily be added to the mix by modifying the karma.config.js browser array. For more browser launchers, visit https://www.npmjs.com/browse/keyword/karma-launcher.
 
