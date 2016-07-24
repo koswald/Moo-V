@@ -109,7 +109,7 @@ To revert the setting, if that should ever be necessary,
 
 Back-end unit tests have been run in Eclipse and IntelliJ.
 
-Front-end unit tests can be run by opening SpecRunner.html or from the command line with `npm test' or `karma start`.
+Front-end unit tests can be run by opening SpecRunner.html or from the command line with `npm test` or `karma start`.
 
 **One advantage to using the karma test runner** is that tests are automatically rerun on file changes. The karma tests are set up to use the headless browser PhantomJS for speed, but Chrome can easily be added to the mix by modifying the karma.config.js browser array. For more browser launchers, visit https://www.npmjs.com/browse/keyword/karma-launcher.
 
