@@ -14,7 +14,7 @@
 
 This web app searches http://omdbapi.com for movie data and if desired adds a movie (title) to a local database.
 
-The front end and back end code are in the same project folder but run on different servers. No IDE was used in development, except that the JUnit tests were written and run in Eclipse. Front-end tests are run from the command line (see below).
+The front end and back end code are in the same project folder but run on different servers. 
 
 **Front-end details:** AngularJS (focus), angular-ui-router, grunt, bootstrap.css, jasmine with karma test runner. No bootstrap.js, so no jQuery. All dependencies are installed with npm.
 

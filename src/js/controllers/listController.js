@@ -49,7 +49,7 @@ angular.module('movie-list').controller('listCtrl', [
 		}
 		$scope.getKarlsMoviesFallback01 = function() {
 
-			$scope.status = "Getting movies from fallback url: " + myMoviesUrlFallback01
+			$scope.status = "Getting movies from fall-back url: " + myMoviesUrlFallback01
 			return myMoviesFactory.getMyMovies(myMoviesUrlFallback01);
 		}
 
@@ -58,7 +58,7 @@ angular.module('movie-list').controller('listCtrl', [
 			return myMoviesFactory.removeTitle($scope.title, myMoviesUrl);
 		}
 		$scope.removeKarlsMovieFallback01 = function () {
-			$scope.status = "Removing \"" + $scope.title + "\" via the fallback url " + myMoviesUrlFallback01;
+			$scope.status = "Removing \"" + $scope.title + "\" via the fall-back url " + myMoviesUrlFallback01;
 			return myMoviesFactory.removeTitle($scope.title, myMoviesUrlFallback01)
 		}
 
@@ -83,7 +83,7 @@ angular.module('movie-list').controller('listCtrl', [
 
 				function(response) {
 
-					// the movie was removed okay, so 
+					// the movie was removed okay, so
 					// get the updated list of movies
 
 					$scope.success = true;

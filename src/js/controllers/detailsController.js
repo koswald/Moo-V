@@ -46,13 +46,13 @@ angular.module('movie-list').controller('detailsCtrl', [
 			.then(
 				function(response) {
 
-					// added movie ok
+					// added movie OK
 
 					$scope.addMovieResponse = response;
 					$state.go("karls-movies");
 				}, function(error) {
 
-					// adding the movie returned an error, but 
+					// adding the movie returned an error, but
 					// it could be an already-exists error, so go to the movies list anyway
 
 					$scope.addMovieError = error;

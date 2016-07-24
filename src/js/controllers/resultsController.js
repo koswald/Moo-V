@@ -1,6 +1,6 @@
 
 angular.module('movie-list').controller('resultsCtrl', [
-	
+
 	// dependencies
 
 	'$scope',
@@ -15,7 +15,7 @@ angular.module('movie-list').controller('resultsCtrl', [
 		$scope.omdbUrl = omdbUrl;
 
 		// get title from cache, in case arriving from another page,
-		// set cache title to "" in order to prevent the movie Undefined from appearing on the 
+		// set cache title to "" in order to prevent the movie Undefined from appearing on the
 		// details page by default
 
 		if ($scope.results.cache.get('title')) {
@@ -50,7 +50,7 @@ angular.module('movie-list').controller('resultsCtrl', [
 						$scope.results.title = $scope.omdb.movies.Title;
 						$scope.results.cache.put("title", $scope.results.title);
 					}
-					$state.go("search-results.list"); 
+					$state.go("search-results.list");
 				}, function (error) {
 
 					// OMDB call failed
@@ -60,17 +60,17 @@ angular.module('movie-list').controller('resultsCtrl', [
 			);
 		}
 
-		// show the abbreviated details right away, if 
+		// show the abbreviated details right away, if
 		// for example we are coming from another page/state
 
-		if ($scope.results.title) $scope.results.searchSubmit(); 
+		if ($scope.results.title) $scope.results.searchSubmit();
 
 		// navigate to the details page (on button click)
 
 		$scope.results.movieDetails = function() {
 			$state.go("movie-details");
 		}
-		
+
 		// scroll down or else requested raw data may be hidden from view
 
 		$scope.results.scrollDown = function() {

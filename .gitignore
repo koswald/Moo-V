@@ -28,4 +28,6 @@ target
 *.sln
 
 # other
-# application.properties
+
+# application.properties should be ignored on a per-user basis; see ReadMe.md
+
