@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 		connect: {
 			app: {
 				options: {
-					port: 9000,
+					port: 8080,
 					base: '.',
 //					open: {
 //						target: 'http://localhost:9000/src/index.html#/',
