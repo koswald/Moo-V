@@ -21,6 +21,9 @@ target
 
 ### Files for Git to ignore ###
 
+# temporary ubuntu setup files
+*.tar.gz
+
 # IntelliJ settings
 *.iml
 
