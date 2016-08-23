@@ -16,13 +16,13 @@ This web app searches http://omdbapi.com for movie data and if desired adds a mo
 
 The front end and back end code share the same project folder but run on different servers. 
 
-**Front-end details:** AngularJS (focus), angular-ui-router, grunt, bootstrap.css, jasmine with karma test runner. No bootstrap.js, so no jQuery, except for Angular's native jqLite. All dependencies are installed with npm.
+**Front-end details:** AngularJS (focus), angular-ui-router, Node.js, grunt, bootstrap.css, jasmine with karma test runner. No bootstrap.js, so no jQuery, except for Angular's native jqLite. All front-end dependencies are installed with npm (npm is included with the Node.js install).
 
-**Back-end details:** Spring-boot, java, maven, hibernate, PostgreSQL. Spring-boot starts a Tomcat server and is run from the command line. 
+**Back-end details:** Spring-boot, Java, Maven, Hibernate, PostgreSQL. Spring-boot uses Maven to install all back-end dependencies except PostgreSQL and Java.
 
 # Installation procedure
 
-Install [PostgreSQL](https://www.postgresql.org/download/). Version 9.4 or later is recommended; recommended username and port: postgres and 5432. When the install is complete, the Stack Builder install will start automatically and you can Cancel out of it.
+Install [PostgreSQL](https://www.postgresql.org/download/). Version 9.4 or later is recommended; recommended username and port: postgres and 5432. When the install is complete, the Stack Builder install will start automatically and you can Cancel out of it. And here is an example of installing [postgres on ubuntu].
 
 Create a database from a console window
 
@@ -135,13 +135,14 @@ The [Spring Boot getting started document] was a *must*.
 
 The backend java leverages [another GitHub project].
 
-An online [markdown editor] was used to create this file. Here is [a basic markdown primer].
+An online [markdown editor] was helpful at times. Here is a GitLab-flavored [markdown primer].
 
 [//]: # (any or all of the following references could have be placed anywhere in this file; note that surrounding the url with angle brackets is optional)
 
 [Node.js]: https://nodejs.org/en/download/current/
 [Java]: http://www.java.com
 [Maven]: http://maven.apache.org/
+[postgres on ubuntu]: https://community.c9.io/t/setting-up-postgresql/1573
 [pom.xml]: pom.xml
 [application.properties]: src/main/resources/application.properties
 [AppConfig.java]: src/main/java/config/AppConfig.java
@@ -153,6 +154,6 @@ An online [markdown editor] was used to create this file. Here is [a basic markd
 [spring boot getting started document]: <http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#getting-started-installing-spring-boot>
 [another GitHub project]: <https://github.com/AlgiersJUG/spring-boot-postgres-sample>
 [same-file link]: http://stackoverflow.com/questions/6695439/how-do-you-create-link-to-a-named-anchor-in-multimarkdown
-[a basic markdown primer]: http://docs.gitlab.com/ee/markdown/markdown.html
+[markdown primer]: https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/user/markdown.md
 
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
