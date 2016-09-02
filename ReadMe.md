@@ -175,13 +175,13 @@ An online [markdown editor] was helpful at times. Here is a GitLab-flavored [mar
 [markdown primer]: https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/user/markdown.md
 
 [Project description]: ReadMe.md#describe
-[Installation procedure]: ReadMe.md##setup
-[Open the project in Eclipse]: ReadMe.md##open
-[Run the back end server from Eclipse]: ReadMe.md##run
-[Run the back end server from IntelliJ]: ReadMe.md##run2
-[Once you are satisfied with the back-end model]: ReadMe.md##mod
-[Unit Tests]: ReadMe.md##test
-[Troubleshooting]: ReadMe.md##fix
-[Links and Credits]: ReadMe.md##stroke
+[Installation procedure]: ReadMe.md#setup
+[Open the project in Eclipse]: ReadMe.md#open
+[Run the back end server from Eclipse]: ReadMe.md#run
+[Run the back end server from IntelliJ]: ReadMe.md#run2
+[Once you are satisfied with the back-end model]: ReadMe.md#mod
+[Unit Tests]: ReadMe.md#test
+[Troubleshooting]: ReadMe.md#fix
+[Links and Credits]: ReadMe.md#stroke
 
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
