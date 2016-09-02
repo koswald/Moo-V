@@ -1,2 +1,2 @@
 
-angular.module('movie-list').value('omdbUrl', 'http://www.omdbapi.com');
+angular.module('movie-list').value('omdbUrl', 'https://www.omdbapi.com');
