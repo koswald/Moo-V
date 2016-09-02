@@ -1,16 +1,18 @@
 #### ReadMe.md Contents
 
-- [Project description](#description)
-- [Installation procedure](#installation-procedure)
-- [Open the project in Eclipse](#open-the-project-in-eclipse)
-- [Run the back end server from Eclipse](#run-the-back-end-server-from-eclipse)
-- [Run the back end server from IntelliJ](#run-the-back-end-server-from-intellij)
-- [Once you are satisfied with the back-end model](#once-you-are-satisfied-with-the-back-end-model)
-- [Unit Tests](#unit-tests)
-- [Troubleshooting](#troubleshooting)
-- [Links and Credits](#credits)
+- [Project description](#describe)
+- [Installation procedure](#setup)
+- [Open the project in Eclipse](#open)
+- [Run the back end server from Eclipse](#run)
+- [Run the back end server from IntelliJ](#run2)
+- [Once you are satisfied with the back-end model](#mod)
+- [Unit Tests](#test)
+- [Troubleshooting](#fix)
+- [Links and Credits](#stroke)
 
-# Project description <a id="description">
+<a name="describe"> 
+
+# Project description 
 
 This web app searches http://omdbapi.com for movie data and if desired adds a movie (title) to a local database.
 
@@ -19,6 +21,8 @@ The front end and back end code share the same project folder but run on differe
 **Front-end details:** AngularJS (focus), angular-ui-router, Node.js, grunt, bootstrap.css, jasmine with karma test runner. No bootstrap.js, so no jQuery, except for Angular's native jqLite. All front-end dependencies are installed with npm (npm is included with the Node.js install).
 
 **Back-end details:** Spring-boot, Java, Maven, Hibernate, PostgreSQL. Spring-boot uses Maven to install all back-end dependencies except PostgreSQL and Java.
+
+<a id="setup">
 
 # Installation procedure
 
@@ -71,18 +75,26 @@ The front-end port can be changed in [Gruntfile.js](Gruntfile.js).
 > [myMoviesUrl.js], and 
 > [myMoviesUrlFallback.js].
 
+<a id="open">
+
 # Open the project in Eclipse 
 
 - Move or copy the project to the Eclipse workspace, or create a new workspace in the project's parent folder (slower).
 - In the Eclipse File menu, select Import ... | General | Existing Projects into Workspace | select the omdb project folder | Finish.
 
+<a id="run">
+
 # Run the back end server from Eclipse
 
 Right click the project in the Eclipse's Project Explorer and select Run As | Maven build... | enter `spring-boot:run` in the goals field | click Run.
 
+<a id="run2">
+
 # Run the back end server from IntelliJ
 
 From the Run menu, click Edit Configurations ... | click Maven on left | click the + button | click Maven on the left (again) | in the Name field give the configuration a name, like "omdb back end" | in the Command line field, type `spring-boot:run` (leave out the `mvn`) | click OK.
+
+<a id="mod">
 
 # Once you are satisfied with the back-end model
 
@@ -105,6 +117,8 @@ To revert the setting, if that should ever be necessary,
 - Comment out `application.properties` in `.git\info\exclude` by beginning the line with a `#`, or delete it.
 - Use the git command above but with `--no-assume-unchanged`.
 
+<a id="test">
+
 # Unit Tests
 
 Back-end unit tests have been run in Eclipse and IntelliJ.
@@ -114,6 +128,8 @@ Front-end unit tests can be run by opening SpecRunner.html or from the command l
 **One advantage to using the karma test runner** is that tests are automatically rerun on file changes. The karma tests are set up to use the headless browser PhantomJS for speed, but Chrome can easily be added to the mix by modifying the karma.config.js browser array. For more browser launchers, visit https://www.npmjs.com/browse/keyword/karma-launcher.
 
 **Another advantage** of using karma is that it has been configured for coverage. After running the tests, the coverage reports can be accessed from `\coverage\<browser (OS)>\index.html`.
+
+<a id="fix">
 
 # Troubleshooting
 
@@ -125,7 +141,9 @@ Error creating bean with name 'entityManagerFactory' defined in class path resou
 
 make sure that the [application.properties] value `spring.jpa.hibernate.ddl-auto` is set to `create-drop`.
 
-# Links and Credits <a id="credits">
+<a id="stroke">
+
+# Links and Credits 
 
 The [OMDB API] provides the movie data to make things interesting.
 
