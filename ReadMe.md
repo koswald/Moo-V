@@ -1,14 +1,14 @@
 #### ReadMe.md Contents
 
-- [Project description](#describe)
-- [Installation procedure](#setup)
-- [Open the project in Eclipse](#open)
-- [Run the back end server from Eclipse](#run)
-- [Run the back end server from IntelliJ](#run2)
-- [Once you are satisfied with the back-end model](#mod)
-- [Unit Tests](#test)
-- [Troubleshooting](#fix)
-- [Links and Credits](#stroke)
+- [Project description]
+- [Installation procedure]
+- [Open the project in Eclipse]
+- [Run the back end server from Eclipse]
+- [Run the back end server from IntelliJ]
+- [Once you are satisfied with the back-end model]
+- [Unit Tests]
+- [Troubleshooting]
+- [Links and Credits]
 
 <a name="describe"> 
 
@@ -173,5 +173,15 @@ An online [markdown editor] was helpful at times. Here is a GitLab-flavored [mar
 [another GitHub project]: <https://github.com/AlgiersJUG/spring-boot-postgres-sample>
 [same-file link]: http://stackoverflow.com/questions/6695439/how-do-you-create-link-to-a-named-anchor-in-multimarkdown
 [markdown primer]: https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/user/markdown.md
+
+[Project description]: ReadMe.md#describe
+[Installation procedure]: ReadMe.md##setup
+[Open the project in Eclipse]: ReadMe.md##open
+[Run the back end server from Eclipse]: ReadMe.md##run
+[Run the back end server from IntelliJ]: ReadMe.md##run2
+[Once you are satisfied with the back-end model]: ReadMe.md##mod
+[Unit Tests]: ReadMe.md##test
+[Troubleshooting]: ReadMe.md##fix
+[Links and Credits]: ReadMe.md##stroke
 
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
