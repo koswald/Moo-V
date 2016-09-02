@@ -1,6 +1,6 @@
 #### ReadMe.md Contents
 
-- [Project description](#project-description)
+- [Project description](#description)
 - [Installation procedure](#installation-procedure)
 - [Open the project in Eclipse](#open-the-project-in-eclipse)
 - [Run the back end server from Eclipse](#run-the-back-end-server-from-eclipse)
@@ -8,9 +8,9 @@
 - [Once you are satisfied with the back-end model](#once-you-are-satisfied-with-the-back-end-model)
 - [Unit Tests](#unit-tests)
 - [Troubleshooting](#troubleshooting)
-- [Links and Credits](#links-and-credits)
+- [Links and Credits](#credits)
 
-# Project description
+# Project description <a id="description">
 
 This web app searches http://omdbapi.com for movie data and if desired adds a movie (title) to a local database.
 
@@ -125,7 +125,7 @@ Error creating bean with name 'entityManagerFactory' defined in class path resou
 
 make sure that the [application.properties] value `spring.jpa.hibernate.ddl-auto` is set to `create-drop`.
 
-# Links and Credits
+# Links and Credits <a id="credits">
 
 The [OMDB API] provides the movie data to make things interesting.
 
