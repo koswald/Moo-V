@@ -10,7 +10,7 @@
 - [Troubleshooting]
 - [Links and Credits]
 
-<a name="describe"> 
+<a id="describe"> 
 
 # Project description 
 
