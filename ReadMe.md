@@ -1,16 +1,14 @@
 #### ReadMe.md Contents
 
-- [Project description]
-- [Installation procedure]
-- [Open the project in Eclipse]
-- [Run the back end server from Eclipse]
-- [Run the back end server from IntelliJ]
-- [Once you are satisfied with the back-end model]
-- [Unit Tests]
-- [Troubleshooting]
-- [Links and Credits]
-
-<a id="describe"> 
+- [Project description]  
+- [Installation procedure]  
+- [Open the project in Eclipse]  
+- [Run the back end server from Eclipse]  
+- [Run the back end server from IntelliJ]  
+- [Once you are satisfied with the back-end model]  
+- [Unit Tests]  
+- [Troubleshooting]  
+- [Links and Credits]  
 
 # Project description 
 
@@ -21,8 +19,6 @@ The front end and back end code share the same project folder but run on differe
 **Front-end details:** AngularJS (focus), angular-ui-router, Node.js, grunt, bootstrap.css, jasmine with karma test runner. No bootstrap.js, so no jQuery, except for Angular's native jqLite. All front-end dependencies are installed with npm (npm is included with the Node.js install).
 
 **Back-end details:** Spring-boot, Java, Maven, Hibernate, PostgreSQL. Spring-boot uses Maven to install all back-end dependencies except PostgreSQL and Java.
-
-<a id="setup">
 
 # Installation procedure
 
@@ -75,26 +71,18 @@ The front-end port can be changed in [Gruntfile.js](Gruntfile.js).
 > [myMoviesUrl.js], and 
 > [myMoviesUrlFallback.js].
 
-<a id="open">
-
 # Open the project in Eclipse 
 
 - Move or copy the project to the Eclipse workspace, or create a new workspace in the project's parent folder (slower).
 - In the Eclipse File menu, select Import ... | General | Existing Projects into Workspace | select the omdb project folder | Finish.
 
-<a id="run">
-
 # Run the back end server from Eclipse
 
 Right click the project in the Eclipse's Project Explorer and select Run As | Maven build... | enter `spring-boot:run` in the goals field | click Run.
 
-<a id="run2">
-
 # Run the back end server from IntelliJ
 
 From the Run menu, click Edit Configurations ... | click Maven on left | click the + button | click Maven on the left (again) | in the Name field give the configuration a name, like "omdb back end" | in the Command line field, type `spring-boot:run` (leave out the `mvn`) | click OK.
-
-<a id="mod">
 
 # Once you are satisfied with the back-end model
 
@@ -117,8 +105,6 @@ To revert the setting, if that should ever be necessary,
 - Comment out `application.properties` in `.git\info\exclude` by beginning the line with a `#`, or delete it.
 - Use the git command above but with `--no-assume-unchanged`.
 
-<a id="test">
-
 # Unit Tests
 
 Back-end unit tests have been run in Eclipse and IntelliJ.
@@ -129,8 +115,6 @@ Front-end unit tests can be run by opening SpecRunner.html or from the command l
 
 **Another advantage** of using karma is that it has been configured for coverage. After running the tests, the coverage reports can be accessed from `\coverage\<browser (OS)>\index.html`.
 
-<a id="fix">
-
 # Troubleshooting
 
 Hibernate error: If you get the following error when starting the back-end server
@@ -140,8 +124,6 @@ Error creating bean with name 'entityManagerFactory' defined in class path resou
 ```
 
 make sure that the [application.properties] value `spring.jpa.hibernate.ddl-auto` is set to `create-drop`.
-
-<a id="stroke">
 
 # Links and Credits 
 
@@ -174,14 +156,14 @@ An online [markdown editor] was helpful at times. Here is a GitLab-flavored [mar
 [same-file link]: http://stackoverflow.com/questions/6695439/how-do-you-create-link-to-a-named-anchor-in-multimarkdown
 [markdown primer]: https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/user/markdown.md
 
-[Project description]: ReadMe.md#describe
-[Installation procedure]: ReadMe.md#setup
-[Open the project in Eclipse]: ReadMe.md#open
-[Run the back end server from Eclipse]: ReadMe.md#run
-[Run the back end server from IntelliJ]: ReadMe.md#run2
-[Once you are satisfied with the back-end model]: ReadMe.md#mod
-[Unit Tests]: ReadMe.md#test
-[Troubleshooting]: ReadMe.md#fix
-[Links and Credits]: ReadMe.md#stroke
+[Project description]: #project-description
+[Installation procedure]: #installation-procedure
+[Open the project in Eclipse]: #open-the-project-in-eclipse
+[Run the back end server from Eclipse]: #run-the-back-end-server-from-eclipse
+[Run the back end server from IntelliJ]: #run-the-back-end-server-from-intellij
+[Once you are satisfied with the back-end model]: #once-you-are-satisfied-with-the-back-end-model
+[Unit Tests]: #unit-tests
+[Troubleshooting]: #troubleshooting
+[Links and Credits]: #links-and-credits
 
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
