@@ -1,14 +1,14 @@
 #### ReadMe.md Contents
 
-- [Project description]
-- [Installation procedure]
-- [Open the project in Eclipse]
-- [Run the back end server from Eclipse]
-- [Run the back end server from IntelliJ]
-- [Once you are satisfied with the back-end model]
-- [Unit Tests]
-- [Troubleshooting]
-- [Links and Credits]
+> [Project description]  
+> [Installation procedure]  
+> [Open the project in Eclipse]  
+> [Run the back end server from Eclipse]  
+> [Run the back end server from IntelliJ]  
+> [Once you are satisfied with the back-end model]  
+> [Unit Tests]  
+> [Troubleshooting]  
+> [Links and Credits]  
 
 # Project description 
 
