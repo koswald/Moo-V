@@ -174,7 +174,7 @@ An online [markdown editor] was helpful at times. Here is a GitLab-flavored [mar
 [same-file link]: http://stackoverflow.com/questions/6695439/how-do-you-create-link-to-a-named-anchor-in-multimarkdown
 [markdown primer]: https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/user/markdown.md
 
-[Project description]: ReadMe.md#describe
+[Project description]: #project-description
 [Installation procedure]: ReadMe.md#setup
 [Open the project in Eclipse]: ReadMe.md#open
 [Run the back end server from Eclipse]: ReadMe.md#run
