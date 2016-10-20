@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 @ComponentScan
 public class AppConfig {
 
-	public static final int PORT = 5555;
+	public static final int PORT = 5554;
 
 	// header values
     public static final boolean exposeAllowedOrigins = true; // expose to client/requester
