@@ -58,14 +58,12 @@ Note 3: item required by Eclipse, but not allowed with spring-boot*
       <!-- Note 1 -->
     </dependency>
 
-    <!-- javax.inject -->
     <dependency>
       <groupId>javax.inject</groupId>
       <artifactId>javax.inject</artifactId>
       <version>1</version>
     </dependency>
 
-    <!-- junit -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -73,14 +71,12 @@ Note 3: item required by Eclipse, but not allowed with spring-boot*
       <scope>test</scope>
     </dependency>
 
-    <!-- postgresql -->
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
       <version>9.4-1206-jdbc42</version>
     </dependency>
 
-    <!-- hibernate-entitymanager -->
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-entitymanager</artifactId>
@@ -101,6 +97,13 @@ Note 3: item required by Eclipse, but not allowed with spring-boot*
       <artifactId>jacoco-maven-plugin</artifactId>
       <version>0.7.6.201602180812</version>
     </dependency>
+
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-server</artifactId>
+        <version>3.0.1</version>
+    </dependency>
+
   </dependencies>
 
   <build>
