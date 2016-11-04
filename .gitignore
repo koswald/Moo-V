@@ -10,13 +10,25 @@
 # Visual Studio settings
 .vs
 
+# Confidential Visual Studio settings
+# see Startup.Auth_.cs for boilerplate Startup.Auth.cs
+
+Startup.Auth.cs
+
+# Visual Studio packages
+packages
+
+#Visual Studio binaries
+bin
+obj
+
 # front-end test results
 coverage
 
 # node libraries
 node_modules
 
-# back-end build files
+# back-end build files (java)
 target
 
 ### Files for Git to ignore ###
@@ -25,8 +37,7 @@ target
 *.iml
 
 # Visual Studio settings
-*.sln
-*.suo
+
 
 # other
 
